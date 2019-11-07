@@ -48,6 +48,12 @@ html{
 	display: block;
 	text-transform: uppercase;
 }
+.btn-lightblue{
+	background-color: rgb(195,228,245);
+	color: rgba(0, 125, 182, 1);
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
 /* NAVIGATION STYLES */
 .fa-bars{
@@ -331,7 +337,6 @@ div.scrollmenu {
   }
   .homepage {
 	  position: relative;
-	  height: 100vh;
   }
   .homepage-content .container p{
 	font-size: 0.8em;
@@ -343,6 +348,9 @@ div.scrollmenu {
 		font-weight: 400;
 		font-size: 1.1em;
 		color: gray;
+	}
+	.description{
+		font-size: 0.8em;
 	}
 
   /* FOOTER NAV STYLES */
@@ -368,3 +376,55 @@ header.main-page{
 	  padding: 10px;
 	  color: white;
   }
+.neigh{
+	width: 25%;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: 500;
+}
+.neigh img{
+	height: 70px;
+}
+
+/* NEIGHBORHOOD STYLES */
+.neighborhood-content{
+	height: 500px;
+	overflow: scroll;
+}
+.neighborhood-content ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+}
+.neighborhood-content ul a{
+	display: block;
+	border-bottom: 1px solid lightgray;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	padding-left: 40px;
+	font-weight: 500;
+}
+.neighborhood-content a i{
+	color: rgba(0, 125, 182, 1);
+	position: absolute;
+	right: 20px;
+	top: 14px;
+}
+
+/* TOPIC STYLES */
+.topic-content p{
+	color: rgba(0, 125, 182, 1);
+	font-weight: 500;
+}
+.topic-content img{
+	float: left;
+	height: 65px;
+}
+.align{
+	margin-left: 80px;
+}
+.topic-neigh{
+	height: 250px;
+}

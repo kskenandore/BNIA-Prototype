@@ -20,5 +20,5 @@ function togglePage(id) {
 }
 
 function skipNav() {
-     location.href = "data.html";
+     location.href = "homepage-noprofile.html";
 } 
