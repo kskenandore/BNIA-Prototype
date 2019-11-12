@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+
+    <!-- Font Awesome Styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Additional Stylesheet -->
+    <link rel="stylesheet" href="../styles/styles.css">
+
+    <title>BNIA</title>
+  </head>
+  <body>
+    <div>
+        <!-- Header-->
+        <header class="main-page">
+            <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
+            <a href="#" class="float-right" onclick="openMenu()">
+                <i style="color:white;" class="fa fa-bars fa-lg"></i>
+            </a>
+        </header>
+
+        <!-- Steps -->
+        <div class="nav-steps mt-4 px-4">
+            <p class="progress mx-3">1</p><span class="step-title">Neighborhoods Selected</span><br/><br/>
+            <p class="active-progress mx-3">2</p><span class="step-title">Select a Topic</span><br/><br/>
+            <p class="progress mx-3">3</p><span class="step-title">Select an Indicator</span>
+        </div>
+
+        <!-- Content -->
+        <div class="mx-auto pt-3 px-3 onboarding-content">
+        <div class="container mt-2">
+            <!--First Row-->
+            <p class="subheading ml-3 mt-3">Followed Topics:</p>
+            <div class="row">
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('census')"><img id="census" src="../static/icon-census.gif"/></a>
+                        <p>Census Demographics</p>
+                    </div>
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('children')"><img id="children" src="../static/icon-children.gif"/></a>
+                        <p>Children and Family Health</p>
+                    </div>
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('crime')"><img id="crime" src="../static/icon-crime-safety.gif"/></a>
+                        <p>Crime and Safety</p>
+                    </div>
+            </div><hr/>
+
+            <!--Second Row-->
+            <p class="subheading ml-3 mt-3">Other Topics:</p>
+            <div class="row">
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('housing')"><img id="housing" src="../static/icon-housing.gif"/></a>
+                        <p>Housing and Community Development</p>
+                    </div>
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('workforce')"><img id="workforce" src="../static/icon-workforce.gif"/></a>
+                        <p>Workforce and Economic Development</p>
+                    </div>
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('sustain')"><img id="sustain" src="../static/icon-sustainability.gif"/></a>
+                        <p>Sustainability</p>
+                    </div>
+            </div> 
+
+            <!-- Third Row -->
+            <div class="row">
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('education')"><img id="education" src="../static/icon-education.gif"/></a>
+                        <p>Education and Youth</p>
+                    </div>
+                    <div class="col-xs topic">
+                        <a onClick="selectTopic('arts')"><img id="arts" src="../static/icon-arts.gif"/></a>
+                        <p>Arts and Culture</p>
+                    </div>
+            </div><hr/>
+        </div>
+        </div>
+
+        <!-- Next Button-->
+        <div style="margin-bottom:150px;">
+            <a href="neighborhoods3.html" class="btn btn-blue float-right mx-3">Next</a>
+        </div>
+    </div>
+
+    <!-- Next Button-->
+    <div class="footer-nav">
+        <a href="homepage.html"><i style="color:gray;" class="fa fa-home"></i></a>
+        <a href="#"><i style="color:gray;" class="fa fa-search"></i></a>
+        <a href="#"><i style="color:gray;" class="fa fa-user"></i></a>
+    </div> 
+    <!-- Optional JavaScript -->
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/scripts.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
