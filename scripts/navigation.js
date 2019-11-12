@@ -4,16 +4,21 @@ function backButton(e) {
 };
 
 function togglePage(id) {
-    nav = ['chart', 'trends', 'data', 'map'];
-    navLinks = ['chart-nav', 'trends-nav', 'data-nav', 'map-nav'];
+    nav = ['chart', 'trends', 'data', 'map','list'];
+    navLinks = ['chart-nav', 'trends-nav', 'data-nav', 'map-nav','list-nav'];
     page = document.getElementById(id);
     active = id + '-nav';
 
     var i;
     for (i = 0; i < nav.length; i++) {
-        document.getElementById(nav[i]).style.display = "none";
-        document.getElementById(navLinks[i]).classList.remove("active");
-      }
+        try {
+            document.getElementById(nav[i]).style.display = "none";
+            document.getElementById(navLinks[i]).classList.remove("active");
+        } catch(error) {
+            console.log(error);
+            continue;
+        }  
+    }
 
     document.getElementById(active).classList.add("active");
     page.style.display = "block";
