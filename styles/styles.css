@@ -437,17 +437,30 @@ header.main-page{
 
 .choose-topic{
 	background-color: #f3f3f3;
-	height: 60vh;
+	height: 100%;
 }
 
 .choose-neighborhood{
 	background-color: #f3f3f3;
-	height: 40vh;
 	word-wrap: break-word;
+}
+
+#findNeighborhoods{
+	height: 35vh;
+	overflow: scroll;
 }
 
 .followed{
 	color: rgba(242, 98, 35, 1);
 	font-size: 0.9em;
 	font-style: italic;
+}
+
+#indicators{
+	height: 50vh;
+	overflow: scroll;
+}
+
+#mapid{
+	height: 300px;
 }
