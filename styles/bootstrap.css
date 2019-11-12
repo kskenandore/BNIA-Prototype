@@ -4113,13 +4113,14 @@ input[type="button"].btn-block {
 }
 
 .nav-pills .nav-link {
-  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: rgba(0, 115, 168,1);
+  color: white;
+  background-color: rgb(87, 87, 87);
 }
 
 .nav-fill .nav-item {

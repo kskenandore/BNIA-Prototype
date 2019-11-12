@@ -23,6 +23,9 @@ html{
 .gray{
 	color: rgba(168, 169, 173, 1);
 }
+.active{
+	color:white !important;
+}
 
 /* CUSTOM BUTTONS */
 .btn-green{
@@ -65,14 +68,6 @@ html{
 	text-align: center;
 }
 
-.nav-pills .nav-link a {
-	color: rgba(0, 125, 182, 1);
-}
-
-a.nav-link.active:hover {
-	color: white;
-}
-
 /* DATA PAGE STYLES */
 #chart{
 	display: block;
@@ -113,13 +108,6 @@ a.nav-link.active:hover {
 }
 .fa-times:hover {
 	cursor: pointer; 
-}
-
-#vital {
-	background-color: white;
-	position: relative;
-	top: -700px;
-	transition: .5s;
 }
 
 /* SCROLLING MENU CSS */
@@ -338,9 +326,6 @@ div.scrollmenu {
 	  right: 20px;
 	  top: 20px;
   }
-  .homepage {
-	  position: relative;
-  }
   .homepage-content .container p{
 	font-size: 0.8em;
 	}
@@ -348,8 +333,8 @@ div.scrollmenu {
 	font-size: 0.9em;
 	}
 	.subheading{
-		font-weight: 400;
-		font-size: 1.1em;
+		font-weight: 500;
+		font-size: 0.9em;
 		color: gray;
 	}
 	.description{
@@ -358,8 +343,8 @@ div.scrollmenu {
 
   /* FOOTER NAV STYLES */
   .footer-nav{
-	position: absolute;
-	bottom: 0;
+	position: fixed;
+	bottom: 0px;
 	width: 100%;
 	background-color: #f1f1f1;
 	color: gray;
@@ -430,4 +415,39 @@ header.main-page{
 }
 .topic-neigh{
 	height: 250px;
+}
+
+/* GENERAL LINKS FLOW */
+.nav-steps .active-progress{
+	background-color: rgb(50,219,173);
+	border: 3px solid rgba(0, 115, 168,1);
+	color: rgba(0, 115, 168,1);
+}
+
+.nav-steps .progress{
+	background-color: rgba(0, 115, 168,1);
+	color: white;
+	text-align: center;
+}
+
+.step-title{
+	color: gray;
+	font-style: italic;
+}
+
+.choose-topic{
+	background-color: #f3f3f3;
+	height: 60vh;
+}
+
+.choose-neighborhood{
+	background-color: #f3f3f3;
+	height: 40vh;
+	word-wrap: break-word;
+}
+
+.followed{
+	color: rgba(242, 98, 35, 1);
+	font-size: 0.9em;
+	font-style: italic;
 }
