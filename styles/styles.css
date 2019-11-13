@@ -70,13 +70,13 @@ html{
 
 /* DATA PAGE STYLES */
 #chart{
-	display: block;
+	display: none;
 }
 #trends{
 	display: none;
 }
 #data{
-	display: none;
+	display: block;
 }
 #map{
 	display: none;
@@ -463,4 +463,18 @@ header.main-page{
 
 #mapid{
 	height: 300px;
+}
+#data-map{
+	height: 300px;
+}
+
+#indicator-content #indicators{
+	height: 60vh;
+	overflow: scroll;
+}
+
+.add-neighborhoods{
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
 }
