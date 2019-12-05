@@ -154,7 +154,7 @@ div.scrollmenu {
 	left: 0;
   }
 .splash-content ul{
-	font-size: 0.9em;
+	font-size: 1em;
 	padding-left: 20px;
 }
 
@@ -169,19 +169,26 @@ div.scrollmenu {
 	word-wrap: break-word;
 	overflow: scroll;
 }
-.next{
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-.cancel{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
 .onboarding header{
 	background-color:  rgba(0, 115, 168,1);
 	color: white;
+}
+.onboarding a {
+	color: white;
+	text-decoration: none;
+}
+
+.onboarding-content #findNeighborhoods{
+	height: 60vh;
+}
+.onboarding-buttons{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+.next{
+	display: block;
+	float: right;
 }
 .steps{
 	text-align: center;
@@ -193,6 +200,11 @@ div.scrollmenu {
 	position: relative;
 	top: 30px;
 	z-index: 0;
+}
+.step-progress {
+	color: rgba(0, 115, 168,1);
+	font-weight: bold;
+	display: inline-block;
 }
 .progress{
 	background-color: white;
@@ -446,9 +458,14 @@ header.main-page{
 }
 
 #findNeighborhoods{
-	height: 35vh;
+	height: 45vh;
 	overflow: scroll;
 }
+.modal-content #findNeighborhoods{
+	height: 30vh;
+	overflow: scroll;
+}
+
 
 .followed{
 	color: rgba(242, 98, 35, 1);
@@ -478,3 +495,86 @@ header.main-page{
 	text-align: center;
 	margin-bottom: 10px;
 }
+
+
+
+
+/* SIDE NAVIGATION */
+
+/* The side navigation menu */
+.sidenav {
+	height: 100%; 
+	width: 0; 
+	position: fixed; 
+	z-index: 1; 
+	top: 0; 
+	right: 0;
+	box-shadow: -1px 0px 5px gray;
+	background-color: white; 
+	overflow-x: hidden; 
+	padding-top: 40px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+	padding-bottom: 8px;
+	padding-top: 8px;
+	padding-left: 30px;
+	border-top: 1px solid lightgray;
+	text-decoration: none;
+	font-size: 1em;
+	color: rgb(17, 17, 17);
+	display: block;
+	transition: 0.3s;
+  }
+  .sidenav a:last-child {
+	  border-bottom: 1px solid lightgray;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:link,
+  .sidenav a:visited,
+  .sidenav a:hover,
+  .sidenav a:focus {
+	color: rgb(17, 17, 17);
+  }
+  .sidenav a:active {
+	background-color: rgba(0, 115, 168,1);
+	color: white;
+  }
+
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 1.5em;
+	margin-left: 50px;
+  }
+  .sidenav img{
+	position: absolute;
+	top: 0;
+	margin: 10px;
+  }
+  .sidenav .profile-link{
+	position: absolute;
+	top: 4px;
+	left: 20px;
+	margin: 10px;
+	border: none !important;
+	font-weight: 600 !important;
+	color: rgba(0, 115, 168,1) !important;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+	transition: margin-left .5s;
+	padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
