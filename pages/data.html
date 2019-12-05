@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="../lib/leaflet/leaflet.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../styles/bootstrap.css">
 
@@ -16,9 +19,6 @@
 
     <!-- Additional Stylesheet -->
     <link rel="stylesheet" href="../styles/styles.css">
-
-    <!-- Leaflet Styles -->
-    <link rel="stylesheet" href="../lib/leaflet/leaflet.css">
 
     <title>BNIA</title>
   </head>
@@ -36,6 +36,7 @@
         <h5>Belair-Edison</h5>
       </div>
 
+      <!-- Pill Nav -->
       <div class="mt-4 px-3">
         <ul id="custom-pill" class="nav nav-pills">
           <li class="nav-item">
@@ -53,6 +54,7 @@
         </ul>
       </div>
 
+      <!-- Body -->
       <div class="px-3 tan-body">
           <div id="data">
               <table class="table p-1">
@@ -90,13 +92,251 @@
         <div id="map">
             <div id="mapid"></div>
         </div>
-
       </div>
+
       <div class="mt-3 text-center" style="margin-bottom:100px;">
-          <a href="#" class="add-neighborhoods">Tap to Add Neighborhoods</a>
-          <button class="btn btn-custom">Compare Years</button>
+          <a href="#" class="add-neighborhoods pb-2" data-toggle="modal" data-target="#add-neigh">Tap to Add Neighborhoods</a>
+          <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#compare-years">Compare Years</button>
       </div>
     </div>
+
+    <!-- Year Modal -->
+    <div id="compare-years" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Select another year to compare data</h6>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Grayed out options means that year is unavailable</p>
+              <div class="mx-auto text-center">
+                <div class="radio">
+                  <label class="d-inline-block px-3"><input type="radio" name="2013" disabled>2013</label>
+                  <label class="d-inline-block px-3"><input type="radio" name="2014">2014</label>
+                </div>
+                <div class="radio">
+                    <label class="d-inline-block px-3"><input type="radio" name="2015">2015</label>
+                    <label class="d-inline-block px-3"><input type="radio" name="2016">2016</label>
+                </div>
+              </div>
+            </div>
+            <!-- COMPARE BUTTON-->
+            <button type="button" class="btn btn-custom w-50 mx-auto mb-4" data-dismiss="modal">Compare Years</button>
+          </div>
+      
+        </div>
+      </div>
+
+      <!-- Neighborhood Modal -->
+    <div id="add-neigh" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Add Neighborhoods</h6>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>You can add up to 3 neighborhoods. Use the list or map below.</p>
+              <!-- Pill Nav -->
+              <div class="mt-4 px-3 pt-2">
+                  <ul id="custom-pill" class="nav nav-pills">
+                    <li class="nav-item">
+                      <a id="list-nav" class="nav-link active" onClick="togglePage('list'); resizeMap()">LIST</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="map-nav" class="nav-link">MAP</a>
+                    </li>
+                  </ul>
+              </div>
+
+              <!-- Content -->
+              <div id="list">
+                <div class="mx-auto  pt-3 px-3 choose-neighborhood">
+                    <input type="text" class="form-control" id="neighborhoodSearch" onkeyup="searchingNeighborhoods()" placeholder="Search Neighborhoods"/>
+                    <ul id="findNeighborhoods" class="form-check mt-4">
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value="" checked disabled><span class="checkmark"></span> Baltimore City <span class="followed">(default)</span></label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Allendale/Irvington/S. Hilton</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Beechfield/Ten Hills/West Hills</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Belair-Edison <span class="followed">(followed)</span></label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Brooklyn/Curtis Bay/Hawkins Point</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Canton</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Cendonia/Frankford</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Cherry Hill</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Chinquapin Park/Belvedere</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Claremont/Armistead</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Clifton-Berea</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Cross-Country/Cheswolde</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Dickeyville/Franklintown</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Dorchester/Ashburton</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Downtown/Seton Hill</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Edmonson Villiage</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Fells Point</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Foret Park/Walbrook</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Glen-Fallstaff</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greater Charles Villiage/Barclay</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greater Govans</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greater Mondawmin</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greater Roland Park/Poplar Hill</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greater Rosemont</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Greenmount East</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Hamilton</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Harbor East/Little Italy</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Harford Echodale</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Highlandtown</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Howard Park/West Arlington</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Inner Harbor/Federal Hill</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Lauraville</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Loch Raven</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Madison/East End</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Medfield/Hampden/Woodberry/Remington</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Midtown</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Midway/Coldstream</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Morrell Park/violetville</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Mount Washington/Coldspring</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> North Baltimore/Guilford/Homeland</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Northwood</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Oldtown/Middle East</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Orangeville/East Highlandtown</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Patterson Park North & East</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Penn North/Reservoir Hill</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Pimlico/Arlington/Hilltop</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Poppleton/The Teraces/Hollins Market</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Sandtown-Winchester/Harlem Park</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> South Baltimore</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Southeastern</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Southern Park Heights</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Southwest Baltimore</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> The Waverlies</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Upton/Druid Heights</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Washington Villiage/Pigtown</label>
+                        </li>
+                        <li class="checkbox">
+                            <label class="checkboxes"><input type="checkbox" value=""><span class="checkmark"></span> Westport/Mount Winans/Lakeland</label>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+            <!-- COMPARE BUTTON-->
+            <button type="button" class="btn btn-custom w-50 mx-auto mb-4" data-dismiss="modal">Add Neighborhood(s)</button>
+          </div>
+      
+        </div>
+      </div>
 
     <!-- Next Button-->
     <div class="footer-nav">
@@ -107,6 +347,7 @@
 
     <!-- Optional JavaScript -->
     <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/scripts.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -116,5 +357,6 @@
     <!-- Map Scripts -->
     <script src="../lib/leaflet/leaflet.js"></script>
     <script src="../scripts/maps.js"></script>
+    <script src="https://bniajfi.org/wp-content/themes/Grido/Theme_v1_3/js/bnia.js"></script>
   </body>
 </html>
