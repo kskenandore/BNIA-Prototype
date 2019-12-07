@@ -404,6 +404,8 @@ header.main-page{
 	text-decoration: none;
 	position: relative;
 	padding-left: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	font-weight: 500;
 }
 .neighborhood-content a i{
@@ -443,8 +445,7 @@ header.main-page{
 }
 
 .step-title{
-	color: gray;
-	font-style: italic;
+	font-weight: 500;
 }
 
 .choose-topic{
@@ -458,7 +459,7 @@ header.main-page{
 }
 
 #findNeighborhoods{
-	height: 45vh;
+	height: 47vh;
 	overflow: scroll;
 }
 .modal-content #findNeighborhoods{
@@ -474,7 +475,7 @@ header.main-page{
 }
 
 #indicators{
-	height: 50vh;
+	height: 60vh;
 	overflow: scroll;
 }
 

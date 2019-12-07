@@ -24,18 +24,29 @@
   </head>
   <body>
     <div>
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+            <a href="profile.html" class="profile-link">My Profile</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="mt-4">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
         <!-- Header-->
-        <header class="main-page">
-            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-2" height="30px"/></a>
+        <header class="main-page p-3">
+            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
             <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
-            <a href="#" class="float-right" onclick="openMenu()">
+            <a href="#" class="float-right" onclick="openNav()">
                 <i style="color:white;" class="fa fa-bars fa-lg"></i>
             </a>
         </header>
 
         <!-- Steps -->
         <div class="nav-steps mt-4 px-4">
-            <p class="step-progress mx-3 my-0">Step 1 of 3</p><span class="step-title">Select up to 3 Neighborhoods</span>
+            <p class="step-progress mx-3 my-0">Step 1 of 3</p><span class="step-title">Select a Neighborhoods</span>
         </div>
 
         <!-- Pill Nav -->
@@ -52,7 +63,7 @@
 
         <!-- Content -->
         <div id="list">
-          <div class="mx-auto mb-4 pt-3 px-3 choose-neighborhood">
+          <div class="mx-auto mb-3 pt-3 px-3 choose-neighborhood">
               <input type="text" class="form-control" id="neighborhoodSearch" onkeyup="searchingNeighborhoods()" placeholder="Search Neighborhoods"/>
               <ul id="findNeighborhoods" class="form-check mt-4">
                     <li class="checkbox">
@@ -235,17 +246,11 @@
         </div>
 
         <!-- Next Button-->
-        <div style="margin-bottom:150px;">
+        <div>
             <a href="neighborhoods2.html" class="btn btn-blue float-right mx-3">Next</a>
         </div>
     </div>
 
-    <!-- Next Button-->
-    <div class="footer-nav">
-        <a href="homepage.html"><i style="color:gray;" class="fa fa-home"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-search"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-user"></i></a>
-    </div> 
     <!-- Optional JavaScript -->
     <script src="../scripts/navigation.js"></script>
     <script src="../scripts/scripts.js"></script>

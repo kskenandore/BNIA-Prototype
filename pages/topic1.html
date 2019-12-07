@@ -21,37 +21,48 @@
   </head>
   <body>
     <div>
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+            <a href="profile.html" class="profile-link">My Profile</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="mt-4">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
         <!-- Header-->
-        <header class="main-page">
+        <header class="main-page p-3">
+            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
             <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
-            <a href="#" class="float-right" onclick="openMenu()">
+            <a href="#" class="float-right" onclick="openNav()">
                 <i style="color:white;" class="fa fa-bars fa-lg"></i>
             </a>
         </header>
 
-        <!-- Steps -->
-        <div class="nav-steps mt-4 px-4">
-            <p class="active-progress mx-3">1</p><span class="step-title">Select a Topic</span><br/><br/>
-            <p class="progress mx-3">2</p><span class="step-title">Select an Indicator</span><br/><br/>
-            <p class="progress mx-3">3</p><span class="step-title">Select a Neighborhood</span>
+         <!-- Steps -->
+         <div class="nav-steps mt-4 px-4">
+            <p class="step-progress mx-3 my-0">Step 1 of 3</p><span class="step-title">Select a Topic</span>
         </div>
 
         <!-- Content -->
-        <div class="mx-auto pt-3 px-3 onboarding-content">
-        <div class="container mt-2">
+        <div class="mx-auto pt-1 px-3 onboarding-content">
+        <div class="container">
+            <hr/>
             <!--First Row-->
             <p class="subheading ml-3 mt-3">Followed Topics:</p>
             <div class="row">
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('census')"><img id="census" src="../static/icon-census.gif"/></a>
+                        <a href="topic2.html"><img id="census" src="../static/icon-census.gif"/></a>
                         <p>Census Demographics</p>
                     </div>
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('children')"><img id="children" src="../static/icon-children.gif"/></a>
+                        <a><img id="children" src="../static/icon-children.gif"/></a>
                         <p>Children and Family Health</p>
                     </div>
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('crime')"><img id="crime" src="../static/icon-crime-safety.gif"/></a>
+                        <a><img id="crime" src="../static/icon-crime-safety.gif"/></a>
                         <p>Crime and Safety</p>
                     </div>
             </div><hr/>
@@ -60,15 +71,15 @@
             <p class="subheading ml-3 mt-3">Other Topics:</p>
             <div class="row">
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('housing')"><img id="housing" src="../static/icon-housing.gif"/></a>
+                        <a><img id="housing" src="../static/icon-housing.gif"/></a>
                         <p>Housing and Community Development</p>
                     </div>
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('workforce')"><img id="workforce" src="../static/icon-workforce.gif"/></a>
+                        <a><img id="workforce" src="../static/icon-workforce.gif"/></a>
                         <p>Workforce and Economic Development</p>
                     </div>
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('sustain')"><img id="sustain" src="../static/icon-sustainability.gif"/></a>
+                        <a><img id="sustain" src="../static/icon-sustainability.gif"/></a>
                         <p>Sustainability</p>
                     </div>
             </div> 
@@ -76,29 +87,18 @@
             <!-- Third Row -->
             <div class="row">
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('education')"><img id="education" src="../static/icon-education.gif"/></a>
+                        <a><img id="education" src="../static/icon-education.gif"/></a>
                         <p>Education and Youth</p>
                     </div>
                     <div class="col-xs topic">
-                        <a onClick="selectTopic('arts')"><img id="arts" src="../static/icon-arts.gif"/></a>
+                        <a><img id="arts" src="../static/icon-arts.gif"/></a>
                         <p>Arts and Culture</p>
                     </div>
             </div><hr/>
         </div>
         </div>
-
-        <!-- Next Button-->
-        <div style="margin-bottom:150px;">
-            <a href="topic2.html" class="btn btn-blue float-right mx-3">Next</a>
-        </div>
     </div>
 
-    <!-- Next Button-->
-    <div class="footer-nav">
-        <a href="homepage.html"><i style="color:gray;" class="fa fa-home"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-search"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-user"></i></a>
-    </div> 
     <!-- Optional JavaScript -->
     <script src="../scripts/navigation.js"></script>
     <script src="../scripts/scripts.js"></script>

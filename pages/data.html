@@ -23,18 +23,32 @@
     <title>BNIA</title>
   </head>
   <body>
-      <header class="main-page">
+      <!-- Side Navigation -->
+      <div id="mySidenav" class="sidenav">
+          <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+          <a href="profile.html" class="profile-link">My Profile</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#" class="mt-4">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+      </div>
+
+      <!-- Header -->
+      <header class="main-page p-3">
+          <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
           <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
-          <a href="#" class="float-right" onclick="openMenu()">
+          <a href="#" class="float-right" onclick="openNav()">
             <i style="color:white;" class="fa fa-bars fa-lg"></i>
           </a>
       </header>
 
-    <div class="mx-auto">
-      <div class="mt-4 px-3">
-        <h4>Average Household Size</h4>
-        <h5>Belair-Edison</h5>
-      </div>
+      <!-- Data Content -->
+      <div class="mx-auto">
+        <div class="mt-4 px-3">
+          <h4>Average Household Size</h4>
+          <h5>Belair-Edison</h5>
+        </div>
 
       <!-- Pill Nav -->
       <div class="mt-4 px-3">
@@ -337,13 +351,6 @@
       
         </div>
       </div>
-
-    <!-- Next Button-->
-    <div class="footer-nav">
-        <a href="homepage.html"><i style="color:gray;" class="fa fa-home"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-search"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-user"></i></a>
-    </div>  
 
     <!-- Optional JavaScript -->
     <script src="../scripts/navigation.js"></script>

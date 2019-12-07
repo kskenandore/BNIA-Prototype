@@ -21,53 +21,57 @@
   </head>
   <body>
     <div>
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+            <a href="profile.html" class="profile-link">My Profile</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="mt-4">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
         <!-- Header-->
-        <header class="main-page">
+        <header class="main-page p-3">
+            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
             <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
-            <a href="#" class="float-right" onclick="openMenu()">
+            <a href="#" class="float-right" onclick="openNav()">
                 <i style="color:white;" class="fa fa-bars fa-lg"></i>
             </a>
         </header>
 
         <!-- Steps -->
         <div class="nav-steps mt-4 px-4">
-            <p class="progress mx-3">1</p><span class="step-title">Housing and Community Dev.</span><br/><br/>
-            <p class="active-progress mx-3">2</p><span class="step-title">Select an Indicator</span><br/><br/>
-            <p class="progress mx-3">3</p><span class="step-title">Select a Neighborhood</span>
+            <p class="step-progress mx-3 my-0">Step 2 of 3</p><span class="step-title">Select an Indicator</span>
         </div>
 
         <!-- Content -->
         <div class="mx-auto mt-4 pt-3 px-3 choose-topic neighborhood-content">
             <input type="text" class="form-control" id="indicatorSearch" onkeyup="searchingIndicators()" placeholder="Search Indicators"/>
             <ul id="indicators">
-                <li><a class="py-2" href="topic3.html">Average Household Size <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Median Household Income <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Percent of Children Living <br/>Below the Poverty Line <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Affordability Index - Rent <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Affordability Index - Mortgage <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Number of Homes Sold <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Median Price of Homes Sold <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Number of Demolition Permits <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Number of Demolition Permits <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Total Female Population <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Total Male Population <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Total Number of Households <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Total Population <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Average Healthy Food Availability Index <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Fast Food Outlet Density for 1,000 Residents <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Infant Mortality Rate <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Life Expectancy  <i class="fa fa-chevron-right"></i></a></li>
-                <li><a class="py-2" href="#">Liquor Outlet density <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="topic3.html">Average Household Size <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Median Household Income <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Percent of Children Living <br/>Below the Poverty Line <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Affordability Index - Rent <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Affordability Index - Mortgage <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Number of Homes Sold <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Median Price of Homes Sold <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Number of Demolition Permits <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Number of Demolition Permits <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Total Female Population <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Total Male Population <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Total Number of Households <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Total Population <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Average Healthy Food Availability Index <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Fast Food Outlet Density for 1,000 Residents <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Infant Mortality Rate <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Life Expectancy  <i class="fa fa-chevron-right"></i></a></li>
+                <li><a href="#">Liquor Outlet density <i class="fa fa-chevron-right"></i></a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Next Button-->
-    <div class="footer-nav">
-        <a href="homepage.html"><i style="color:gray;" class="fa fa-home"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-search"></i></a>
-        <a href="#"><i style="color:gray;" class="fa fa-user"></i></a>
-    </div> 
     <!-- Optional JavaScript -->
     <script src="../scripts/navigation.js"></script>
     <script src="../scripts/scripts.js"></script>
