@@ -308,7 +308,7 @@ div.scrollmenu {
 
   /* HOMEPAGE STYLES */
   .homepage header{
-	  background-color: rgba(0, 115, 168,1);
+	  background-color: rgba(0, 125, 182, 1);
 	  color: white;
 	  position: relative;
   }
@@ -511,7 +511,7 @@ header.main-page{
 	top: 0; 
 	right: 0;
 	box-shadow: -1px 0px 5px gray;
-	background-color: white; 
+	background-color: rgb(235, 244, 247); 
 	overflow-x: hidden; 
 	padding-top: 40px; /* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -522,16 +522,28 @@ header.main-page{
 	padding-bottom: 8px;
 	padding-top: 8px;
 	padding-left: 30px;
-	border-top: 1px solid lightgray;
 	text-decoration: none;
-	font-size: 1em;
+	font-size: .9em;
 	color: rgb(17, 17, 17);
 	display: block;
 	transition: 0.3s;
   }
-  .sidenav a:last-child {
-	  border-bottom: 1px solid lightgray;
+  .sidenav .side-link {
+	border-top: 1px solid gray;
+	font-size: 1em;
   }
+  .sidenav a:nth-child(7) {
+	border-bottom: 1px solid gray;
+	margin-bottom: 15px;
+	font-size: 1em;
+ }
+
+ /* Header styles */
+ .sidenav p {
+	 font-weight: 500;
+	 border-bottom: 2px solid #006699;
+	 font-size: 1.2em;
+ }
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:link,
@@ -579,3 +591,39 @@ header.main-page{
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
   }
+
+  /* PROFILE STYLES */
+.clear {
+	clear: both;
+}
+.profile-info{
+	font-size: 0.9em;
+	margin-left: 110px;
+}
+.profile-info a{
+	color:rgba(0, 115, 168,1);
+}
+.profile-hello{
+	font-size: 1.3em;
+	color: rgb(0, 87, 128);
+	font-weight: 500;
+}
+.profile-info button{
+	height: 30px;
+	font-size: 0.8em;
+}
+.favorited{
+	background-color: rgb(235, 244, 247);
+	width: 99%;
+	margin: auto;
+	border-radius: 20px;
+}
+.neigh2{
+	width: 33%;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: 500;
+}
+.neigh2 img{
+	height: 70px;
+}
