@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+
+    <!-- Font Awesome Styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Additional Stylesheet -->
+    <link rel="stylesheet" href="../styles/styles.css">
+
+    <title>BNIA</title>
+  </head>
+  <body>
+    <div>
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+            <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+            <a href="profile.html" class="profile-link">My Profile</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p class="mb-0 px-4 mt-4 pt-2 pb-3">Explore Vital Signs 2017</p>
+            <a class="side-link" href="neighborhoods1.html" class="mt-4">Neighborhoods</a>
+            <a class="side-link" href="topic1.html">Topics</a>
+            <a class="side-link" href="indicators1.html">Indicators</a>
+            <a href="#">Help Center</a>
+            <a href="#">Resource Library</a>
+            <a href="#">Learning Community</a>
+            <a href="#">About BNIA</a>
+        </div>
+
+        <!-- Header-->
+        <header class="main-page p-3">
+            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
+            <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
+            <a href="#" class="float-right" onclick="openNav()">
+                <i style="color:white;" class="fa fa-bars fa-lg"></i>
+            </a>
+        </header>
+        
+        <!-- Content -->
+        <div class="profile-content p-4">
+            <img id="profilePic" class="d-block float-left" src="../static/profile-picture.gif" width="90px"/>
+            <div class="profile-info mt-2">    
+              <button class="btn btn-blue float-right">Edit Profile</button>
+              <p class="p-0 m-0 profile-hello">Hello, Kandis</p>
+              <a href="mailto:kandis@giveback.com">kandis@giveback.com</a>
+              <p>Oganization: Giveback Charities</p>
+            </div><hr class="clear mt-4"/>
+
+            <div class="favorited p-3">
+              <h6 class="mb-3">Your Most Visited Topics:</h6>
+              <div class="row mx-auto">
+                  <div class="col-xs topic">
+                      <a><img id="children" src="../static/profile-icon-children.gif"/></a>
+                      <p>Children and Family Health</p>
+                  </div>
+                  <div class="col-xs topic">
+                      <a><img id="crime" src="../static/profile-icon-safety.gif"/></a>
+                      <p>Crime and Safety</p>
+                  </div>
+              </div>
+            </div><hr/>
+
+            <div class="favorited p-3">
+              <h6>Your Most Visited Neighborhoods:</h6>
+              <div class="container mt-2 mx-auto">
+                  <div class="row px-3">
+                      <div class="col-xs neigh2">
+                          <a href="#"><img src="../static/MyNeigh-baltimoreCity.gif"/></a>
+                          <p>Baltimore City</p>
+                      </div>
+                      <div class="col-xs neigh2">
+                          <a href="data.html"><img src="../static/MyNeigh-belair.gif"/></a>
+                          <p>Belair-Edison</p>
+                      </div>
+                      <div class="col-xs neigh2">
+                          <a href="#"><img src="../static/MyNeigh-Brooklyn.gif"/></a>
+                          <p>Brooklyn/Curtis Bay</p>
+                      </div>
+                  </div>
+              </div>
+            </div><hr/>                            
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="../scripts/navigation.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
