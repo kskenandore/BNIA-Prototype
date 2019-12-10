@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+
+    <!-- Font Awesome Styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Additional Stylesheet -->
+    <link rel="stylesheet" href="../styles/styles.css">
+<style>
+li {
+  padding-bottom: 15px;
+}
+
+</style>
+    <title>BNIA</title>
+  </head>
+  <body>
+    <div>
+       <!-- Side Navigation -->
+       <div id="mySidenav" class="sidenav">
+            <img src="../static/profile-picture.gif" class="float-left" height="40px"/>
+            <a href="profile.html" class="profile-link">My Profile</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p class="mb-0 px-4 mt-4 pt-2 pb-3">Explore Vital Signs 2017</p>
+            <a class="side-link" href="neighborhoods1.html" class="mt-4">Neighborhoods</a>
+            <a class="side-link" href="topic1.html">Topics</a>
+            <a class="side-link" href="indicators1.html">Indicators</a>
+            <a href="#">Help Center</a>
+            <a href="#">Resource Library</a>
+            <a href="#">Learning Community</a>
+            <a href="#">About BNIA</a>
+        </div>
+
+        <!-- Header-->
+        <header class="main-page p-3">
+            <a href="homepage.html"><img src="../static/bnia_logo_new.png" class="d-block mb-3" height="30px"/></a>
+            <a onClick="backButton(event)"><i class="fa fa-chevron-left pr-1"></i>Back</a>
+            <a href="#" class="float-right" onclick="openNav()">
+                <i style="color:white;" class="fa fa-bars fa-lg"></i>
+            </a>
+        </header>
+
+        <!-- Steps -->
+        <div class="nav-steps mt-4 px-4">
+            <p class="step-progress mx-3 my-0">Step 3 of 3</p><span class="step-title">Select an Indicator</span>
+        </div>
+
+        <!-- Content -->
+        <div class="mx-auto mt-4 pt-3 px-3 choose-topic neighborhood-content">
+            <input type="text" class="form-control" id="indicatorSearch" onkeyup="searchingIndicators()" placeholder="Search Indicators"/>
+            <ul id="indicators">
+                <li><a href="data.html">Average Household Size</a></li>
+                <li><a href="#">Median Household Income</a></li>
+                <li><a href="#">Percent of Children Living Below the Poverty Line</a></li>
+                <li><a href="#">Affordability Index - Rent</a></li>
+                <li><a href="#">Affordability Index - Mortgage</a></li>
+                <li><a href="#">Number of Homes Sold</a></li>
+                <li><a href="#">Median Price of Homes Sold</a></li>
+                <li><a href="#">Number of Demolition Permits</a></li>
+                <li><a href="#">Number of Demolition Permits</a></li>
+                <li><a href="#">Total Female Population</a></li>
+                <li><a href="#">Total Male Population</a></li>
+                <li><a href="#">Total Number of Households</a></li>
+                <li><a href="#">Total Population</a></li>
+                <li><a href="#">Average Healthy Food Availability Index</a></li>
+                <li><a href="#">Fast Food Outlet Density</a></li>
+                <li><a href="#">Infant Mortality Rate</a></li>
+                <li><a href="#">Life Expectancy</a></li>
+                <li><a href="#">Liquor Outlet density</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/scripts.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
