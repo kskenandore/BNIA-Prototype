@@ -73,55 +73,58 @@
       </div>
 
       <!-- Body -->
-      <div class="px-3 tan-body">
-          <div id="data">
-              <table class="table p-1">
-                <tr>
-                  <td></td>
-                  <td><strong>2016</strong></td>
-                  <td><strong>2017</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>Belair-Edison</strong></td>
-                  <td><strong>2.8</strong></td>
-                  <td><strong>2.5</strong></td>
-                </tr>
-                <tr>
-                  <td>Clifton-Berea</td>
-                  <td>2.7</td>
-                  <td>2.7</td>
-                </tr>
-                <tr>
-                  <td>Brooklyn/Curtis Bay Hawkins Point</td>
-                  <td>2.9</td>
-                  <td>2.7</td>
-                </tr>
-                <tr>
-                  <td>Baltimore City</td>
-                  <td>2.8</td>
-                  <td>2.7</td>
-                </tr>
-              </table>
-          </div>
-
-        <div id="chart">
-          <img src="../static/avg-house-size-tab-chart.gif" title="BNIA Logo" alt="BNIA Logo" class="mw-100"/>
+      <div id="data">
+        <div class="px-3 tan-body">
+          <table class="table p-1">
+            <tr>
+              <td></td>
+              <td><strong>2016</strong></td>
+              <td><strong>2017</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Belair-Edison</strong></td>
+              <td><strong>2.8</strong></td>
+              <td><strong>2.5</strong></td>
+            </tr>
+            <tr>
+              <td>Clifton-Berea</td>
+              <td>2.7</td>
+              <td>2.7</td>
+            </tr>
+            <tr>
+              <td>Brooklyn/Curtis Bay Hawkins Point</td>
+              <td>2.9</td>
+              <td>2.7</td>
+            </tr>
+            <tr>
+              <td>Baltimore City</td>
+              <td>2.8</td>
+              <td>2.7</td>
+            </tr>
+          </table>
         </div>
-
-        <div id="trends">
-          <img src="../static/avg-house-size-tab-trend.gif" title="BNIA Logo" alt="BNIA Logo" class="mw-100"/>
-        </div>
-
-        <div id="map">
-            <div id="mapid"></div>
-        </div>
-      </div>
-
-      <div class="mt-3 text-center" style="margin-bottom:100px;">
+        <div class="mt-3 text-center" style="margin-bottom:100px;">
           <a href="#" class="add-neighborhoods pb-2" data-toggle="modal" data-target="#add-neigh">Tap to Add Neighborhoods</a>
           <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#compare-years">Compare Years</button>
       </div>
     </div>
+
+      <div id="chart">
+        <img src="../static/avg-house-size-tab-chart.gif" title="BNIA Logo" alt="BNIA Logo" class="mw-100"/>
+      </div>
+
+      <div id="trends">
+        <img src="../static/avg-house-size-tab-trend.gif" title="BNIA Logo" alt="BNIA Logo" class="mw-100"/>
+        <div class="mt-3 text-center" style="margin-bottom:100px;">
+          <a href="#" class="add-neighborhoods pb-2" data-toggle="modal" data-target="#add-neigh">Tap to Add Neighborhoods</a>
+        </div>
+      </div>
+
+      <div id="map">
+          <div id="mapid"></div>
+      </div>
+    </div>
+  </div>
 
     <!-- Year Modal -->
     <div id="compare-years" class="modal fade" role="dialog">
